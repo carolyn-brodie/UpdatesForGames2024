@@ -75,7 +75,7 @@ class Game(arcade.View):
         for y in range(200, SCREEN_HEIGHT-50, ((SCREEN_HEIGHT-50) // 3)):
             arcade.draw_line(0, y, SCREEN_WIDTH, y, arcade.color.BLACK, 2)
         self.draw_game()
-        #self.draw_game_over()
+
 
     def draw_game(self):
         # Put the text on the screen.
@@ -135,7 +135,7 @@ class Game(arcade.View):
             coords = self.get_centers(position)
             symbol = arcade.Sprite(image, 2)
 
-            symbol.center_x = coords[1]+15
+            symbol.center_x = coords[1]
             symbol.center_y = coords[0]
             self.move_list.append(symbol)
             self.all_sprites_list.append(symbol)
